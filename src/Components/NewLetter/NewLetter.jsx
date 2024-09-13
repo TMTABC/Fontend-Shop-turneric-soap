@@ -8,6 +8,7 @@ export const NewLetter = () => {
             <p>Subscribe to our newletter and stay updated</p>
             <div>
                 <input type="email" placeholder='Your email' />
+                <button>Subscribe</button>
             </div>
         </div>
     )
