@@ -9,7 +9,7 @@ export const Navbar = () => {
   const menuItems = {
     shop: { label: 'Shop', url: '/' },
     instruction: { label: 'Gioi Thieu', url: '/instruction' },
-    product: { label: 'Sam Pham', url: '/product' },
+    product: { label: 'Sam Pham', url: '/allproduct' },
     process: { label: 'Quy Trinh San Xuat', url: '/process' },
     // Bạn có thể thêm nhiều mục khác ở đây
   };
