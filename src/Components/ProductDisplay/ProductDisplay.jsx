@@ -75,7 +75,7 @@ export const ProductDisplay = (props) => {
                         <button onClick={handleIncrease} className="quantity-btn">+</button>
                     </div>
                 </div>
-                <button onClick={() => { addToCart(product.id, quantity) }} className='add-to-cart-btn'>ADD TO CART</button>
+                <button onClick={() => { addToCart(product.id) }} className='add-to-cart-btn'>ADD TO CART</button>
                 <p className='productdisplay-right-category'><span>Category :</span>Nghe,Soap</p>
                 <p className='productdisplay-right-category'><span>Tag :</span>Nghe,Soap</p>
 

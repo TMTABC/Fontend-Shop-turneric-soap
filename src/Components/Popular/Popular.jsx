@@ -7,6 +7,7 @@ export const Popular = () => {
     return (
         <div className='popular'>
             <h1>POPULAR PRODUCT</h1>
+            <hr />
             <div className="popular-item">
                 {data_product.map((item, i) => {
                     return <Item key={i} {...item} />
