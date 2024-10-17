@@ -10,6 +10,7 @@ import { Footer } from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
+import Process from "./Pages/Process";
 function App() {
   return (
     <div>
@@ -22,7 +23,8 @@ function App() {
           <Route path='/process' element={<ShopCategory banner={kid_banner} category='process' />} /> */}
           <Route path='/instruction' element={<ShopCategory banner={men_banner} category='men' />} />
           <Route path='/allproduct' element={<ShopCategory banner={women_banner} category='women' />} />
-          <Route path='/process' element={<ShopCategory banner={kid_banner} category='kid' />} />
+          {/*<Route path='/process' element={<ShopCategory banner={kid_banner} category='kid' />} />*/}
+          <Route path='/process' element={<Process />} />
           <Route path='/product' element={<Product />}>
             <Route path=':productId' element={<Product />} />
           </Route>

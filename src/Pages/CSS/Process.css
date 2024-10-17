@@ -1,0 +1,46 @@
+/* components/SoapMakingProcess.css */
+
+.container {
+    width: 100%;
+    padding: 24px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.stepper-container {
+    margin-bottom: 24px;
+}
+
+.step-button {
+    font-weight: normal;
+    color: #555;
+}
+
+.step-button.active {
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.step-details {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.step-details-title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+}
+
+.button {
+    margin-right: 8px;
+}
