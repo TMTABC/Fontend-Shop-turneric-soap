@@ -2,9 +2,17 @@
     display: flex;
     justify-content: space-around;
     padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
     align-items: center;
+    background: linear-gradient(45deg, #25cf1196, #e1ffea22 60%);
+    position: sticky; /* Giữ navbar ở trên khi cuộn */
+    top: 0; /* Đặt vị trí ở đầu */
+    z-index: 999; /* Đảm bảo navbar luôn hiển thị phía trên */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Thêm viền bóng nhẹ */
+    opacity: 1; /* Đảm bảo không trong suốt */
+    backdrop-filter: none; /* Loại bỏ hiệu ứng làm mờ */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng mượt */
 }
+
 
 /* .nav-logo */
 .nav-logo {
@@ -46,6 +54,21 @@
     border-radius: 10px;
     background: red;
 }
+/* CSS cho trạng thái bình thường */
+.nav-menu li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* CSS cho mục đang được chọn (active) */
+.active {
+    background-color: #84e146; /* Màu nền khác cho mục đang chọn */
+    color: #1a1c1b; /* Màu chữ khác */
+    font-weight: bold; /* Chữ đậm hơn */
+    border-radius: 5px;
+    padding: 10px;
+}
 
 /* nav-login-cart */
 .nav-login-cart {
@@ -72,7 +95,7 @@
 }
 
 /* nav-cart-cout */
-.nav-cart-cout {
+.nav-cart-count {
     width: 22px;
     height: 22px;
     display: flex;
@@ -120,7 +143,7 @@
         font-size: 16px;
     }
 
-    .nav-cart-cout {
+    .nav-cart-count {
         margin-left: -40px;
         font-size: 12px;
     }
@@ -147,7 +170,7 @@
         width: 30px;
     }
 
-    .nav-cart-cout {
+    .nav-cart-count {
         width: 18px;
         height: 18px;
     }

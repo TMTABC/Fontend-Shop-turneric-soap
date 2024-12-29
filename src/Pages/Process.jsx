@@ -1,4 +1,3 @@
-// components/SoapMakingProcess.jsx
 import React, { useState } from 'react';
 import { Stepper, Step, StepButton, Typography, Button, Box } from '@mui/material';
 import './CSS/Process.css';
@@ -21,6 +20,15 @@ const stepDetails = [
     'Đóng gói sản phẩm sau khi hoàn thành.'
 ];
 
+const stepImages = [
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221532144110.jpg',
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221532481002.jpg',
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221533099431.jpg',
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221533425643.jpg',
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221532144110.jpg',
+    'https://cdn.tgdd.vn/Files/2021/12/22/1406107/cong-thuc-lam-xa-phong-nghe-giam-tham-duong-am-cho-da-vao-mua-dong-202112221534096623.jpg'
+];
+
 function Process() {
     const [activeStep, setActiveStep] = useState(0);
 
@@ -29,7 +37,7 @@ function Process() {
     };
 
     return (
-        <Box className="container">
+        <Box className="container" style={{ marginTop: 100, width: "auto" }}>
             <Stepper nonLinear activeStep={activeStep} className="stepper-container">
                 {steps.map((label, index) => (
                     <Step key={label}>
@@ -46,7 +54,15 @@ function Process() {
                 <Typography variant="h6" className="step-details-title">
                     {steps[activeStep]}
                 </Typography>
-                <Typography>{stepDetails[activeStep]}</Typography>
+                {/* Hiển thị ảnh và mô tả bên cạnh nhau */}
+                <Box className="step-content">
+                    <img
+                        src={stepImages[activeStep]}
+                        alt={steps[activeStep]}
+                        className="step-image"
+                    />
+                    <Typography className="step-description">{stepDetails[activeStep]}</Typography>
+                </Box>
                 <Box className="navigation-buttons">
                     <Button
                         color="inherit"

@@ -4,6 +4,7 @@
     align-items: center;
     gap: 10px;
     height: 75vh;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff); /* Gradient xanh lá */
 }
 
 .popular h1 {
